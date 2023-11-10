@@ -44,13 +44,14 @@ export default function Cart({id}){
                             <kbd className="kbd w-64"><h2>Mrp: ₹ {((data.price / (1 - data.discountPercentage / 100))*90).toFixed(2)}</h2></kbd>
                             <p>{data.description}</p> 
                             
-                         <div className="card-actions justify-center">       
+                         <div className="card-actions justify-center">    
+                         <span>Quantity:</span>   
                             <select
                             className="select select-bordered select-sm w-24 max-w-xs"
                             onChange={handleQuantityChange}
                             value={cart}
                             >
-                                    <option value={1}>1</option>
+                            <option value={1}>1</option>
                             <option value={2}>2</option>
                             <option value={3}>3</option>
                             <option value={4}>4</option>
