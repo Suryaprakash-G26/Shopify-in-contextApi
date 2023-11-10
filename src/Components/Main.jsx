@@ -1,17 +1,13 @@
 /* eslint-disable react/prop-types */
 
 import { useNavigate } from "react-router";
+import { AppState } from "../contetapi/contextapi";
 
-export default function Main({info}){
+export default function Main(){
     const navigate=useNavigate();
-
+    const {info}=AppState()
     const shopers=info;
 
-
-    
-
-
-   
     return(
        <>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 m-5 p-5">

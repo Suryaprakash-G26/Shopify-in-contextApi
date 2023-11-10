@@ -2,8 +2,11 @@
 import { useState } from "react";
 import Topbar from "./topbar";
 import { useNavigate } from "react-router";
+import { AppState } from "../contetapi/contextapi";
 
-export default function Cart({info,id}){
+export default function Cart({id}){
+
+    const{info}=AppState();
     const selectedproduct=info?.filter((data)=>data.id==id.id)
     const [cart,setcart]=useState(1);
     const navigate=useNavigate();

@@ -3,11 +3,12 @@ import './App.css'
 
 import Mainpage from './pages/Mainpage'
 import Cartpage from './pages/cartpage' 
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { GetAllproducts } from './Api/api';
+import { AppState } from './contetapi/contextapi';
 
 function App() {
-  const [info,setinfo]=useState()
+  const {setinfo}=AppState();
   useEffect(() => {
     GetAllproducts()
       .then((data) => {
@@ -24,8 +25,8 @@ function App() {
   return (
     <div className="App">
       <Routes>
-        <Route exact path='/' element={<Mainpage info={info}/>} />
-        <Route path='/cart/:id' element={<Cartpage info={info} />} />  
+        <Route exact path='/' element={<Mainpage />} />
+        <Route path='/cart/:id' element={<Cartpage  />} />  
       </Routes>
     </div>
   )

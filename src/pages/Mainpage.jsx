@@ -3,11 +3,11 @@
 import Main from "../Components/Main"
 import Workspace from "../Components/Workspace"
 
-export default function Mainpage({info}){
+export default function Mainpage(){
 
     return(
         <Workspace>
-            <Main info={info}/>
+            <Main />
         </Workspace>
     )
 }
