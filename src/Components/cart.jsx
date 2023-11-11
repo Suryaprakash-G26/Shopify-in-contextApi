@@ -29,7 +29,23 @@ export default function Cart({id}){
             <div className="grid m-1">
                 {selectedproduct&&selectedproduct?.map((data,id)=>
                 <div className="card lg:card-side bg-base-100 shadow-xl" key={id}>
-                <figure><img src={data.thumbnail} alt="Mobile"/></figure>
+                  <div className="carousel carousel-center max-w-md p-4 space-x-4 bg-neutral rounded-box">
+                    <div className="carousel-item">
+                      <img src={data.images[0]} className="rounded-box" />
+                    </div>
+                    <div className="carousel-item">
+                      <img src={data.images[1]} className="rounded-box" />
+                    </div> 
+                    <div className="carousel-item">
+                      <img src={data.images[2]} className="rounded-box" />
+                    </div>
+                    <div className="carousel-item">
+                      <img src={data.images[3]} className="rounded-box" />
+                    </div> 
+                    <div className="carousel-item">
+                      <img src={data.images[4]} className="rounded-box" />
+                    </div>
+                  </div>
                 <div className="card-body">
                        <h1 className="card-title">Model Name: {data.title} </h1>
                             <h2 className="card-title">Brand:{data.brand} <div className="badge badge-accent badge-outline">Rating: {data.rating}/5</div> </h2>
